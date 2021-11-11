@@ -1,0 +1,35 @@
+{
+  "name": "notable-coding-challenge",
+  "version": "1.0.0",
+  "description": "notable coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode development --watch",
+    "server": "npx nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xingvoong/notable-coding-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xingvoong/notable-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/xingvoong/notable-coding-challenge#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.0",
+    "webpack": "^5.64.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "compression": "^1.7.4",
+    "compression-webpack-plugin": "^9.0.0",
+    "express": "^4.17.1",
+    "webpack-bundle-analyzer": "^4.5.0"
+  }
+}

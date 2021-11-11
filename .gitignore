@@ -1,0 +1,19 @@
+node_modules
+bundle.js
+bundle.js.gz
+
+config.js
+
+package-lock.json
+
+.eslintrc.js
+
+# macOS
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+.vscode
+
+MVP
+img

@@ -1,2 +1,2 @@
-# channel-meter
-channel-meter coding challenge
+# notable-coding-challenge
+notable coding challenge

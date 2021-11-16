@@ -45,18 +45,32 @@ const getUserByID = async (userID) => {
 
 const createUser = async (body) => {
   const values = body
-  console.log(body)
   const client = await pool.connect();
   const query = 'insert into users (id, username, user_email) values ($1, $2, $3)';
 
   try {
     return await client.query(query, values);
   } catch (err) {
+    return err
+  } finally {
+    client.release()
+  }
+};
+
+const deleteUser = async (id) => {
+  const value = [id]
+  const client = await pool.connect();
+  const query = 'delete from users where id = $1';
+
+  try {
+    return await client.query(query, value);
+  } catch (err) {
+    return err
   } finally {
     client.release()
   }
 };
 
 module.exports = {
-  getAllUsers, getUserByID, getUserByName, createUser
+  getAllUsers, getUserByID, getUserByName, deleteUser, createUser
 };

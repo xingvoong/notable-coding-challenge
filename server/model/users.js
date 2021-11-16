@@ -43,6 +43,20 @@ const getUserByID = async (userID) => {
   }
 };
 
+const createUser = async (body) => {
+  const values = body
+  console.log(body)
+  const client = await pool.connect();
+  const query = 'insert into users (id, username, user_email) values ($1, $2, $3)';
+
+  try {
+    return await client.query(query, values);
+  } catch (err) {
+  } finally {
+    client.release()
+  }
+};
+
 module.exports = {
-  getAllUsers, getUserByID, getUserByName
+  getAllUsers, getUserByID, getUserByName, createUser
 };

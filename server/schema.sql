@@ -8,3 +8,15 @@ create table if not exists users (
   username varchar(40),
   user_email varchar(140)
 )
+
+insert into "users" (id, username, user_email) values (1, 'a_user', 'a_user@gmail.com');
+
+insert into "users" (id, username, user_email) values (2, 'b_user', 'b_user@gmail.com');
+
+insert into "users" (id, username, user_email) values (3, 'c_user', 'c_user@gmail.com');
+
+insert into "users" (id, username, user_email) values (4, 'd_user', 'd_user@gmail.com');
+
+insert into "users" (id, username, user_email) values (5, 'e_user', 'e_user@gmail.com');
+
+

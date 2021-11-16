@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 router.get('/users', controller.users.getAllUsers);
 router.get('/users/username/:username', controller.users.getUserByName);
 router.get('/users/:userID', controller.users.getUserById)
-router.post('/users/user', controller.users.createUser);
-
+router.post('/users/create', controller.users.createUser);
+router.delete('/users/delete/:id', controller.users.deleteUser);
 
 module.exports = router;

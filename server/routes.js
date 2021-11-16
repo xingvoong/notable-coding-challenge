@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/users', controller.users.getAllUsers);
-// router.get('/users/:username', controller.users.getOneUser)
+router.get('/users/username/:username', controller.users.getUserByName);
 router.get('/users/:userID', controller.users.getUserById)
 
 

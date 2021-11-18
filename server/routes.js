@@ -5,10 +5,7 @@ router.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-router.get('/users', controller.users.getAllUsers);
-router.get('/users/username/:username', controller.users.getUserByName);
-router.get('/users/:userID', controller.users.getUserById)
-router.post('/users/create', controller.users.createUser);
-router.delete('/users/delete/:id', controller.users.deleteUser);
+router.get('/doctors', controller.doctors.getAllDoctors);
+router.get('/doctorappoinment/:doctor_id/:date_time', controller.appointment.getAppointment);
 
 module.exports = router;

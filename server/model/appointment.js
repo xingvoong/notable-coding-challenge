@@ -16,6 +16,19 @@ const getAppointment = async (doctor_id, date_time) => {
   }
 }
 
+const deleteAppointment = async (appoinment_id) => {
+  const values = [appoinment_id]
+  const query = 'delete from appointment where id = $1';
+
+  try {
+    return await client.query(query, value);
+  } catch (err) {
+    return err
+  } finally {
+    client.release()
+  }
+}
+
 module.exports = {
-  getAppointment
+  getAppointment, deleteAppointment
 }

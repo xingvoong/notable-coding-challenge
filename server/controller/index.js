@@ -1,1 +1,2 @@
-exports.users = require('./users');
+exports.doctors = require('./doctors');
+exports.appointment = require('./appointment');

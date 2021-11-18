@@ -1,6 +1,8 @@
-# notable-coding-challenge
 ## Run Locally
 _Check required tech is installed (see below)._
+
+## Project github repo:
+https://github.com/xingvoong/notable-coding-challenge
 
 Clone the project
 

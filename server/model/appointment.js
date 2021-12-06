@@ -16,12 +16,12 @@ const getAppointment = async (doctor_id, date_time) => {
   }
 }
 
-const deleteAppointment = async (appoinment_id) => {
-  const values = [appoinment_id]
-  const query = 'delete from appointment where id = $1';
-
+const deleteAppointment = async (appointment_id, doctor_id) => {
+  const values = [appointment_id, doctor_id]
+  const client = await pool.connect()
+  const query = 'delete from appointment where id = $1 and doctor_id = $2';
   try {
-    return await client.query(query, value);
+    return await client.query(query, values);
   } catch (err) {
     return err
   } finally {

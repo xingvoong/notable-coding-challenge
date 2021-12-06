@@ -8,9 +8,10 @@ module.exports = {
     .catch((err) => { res.status(404).send(err); });
   },
   deleteAppointment: (req, res) => {
-    const {id} = req.params;
-    model.appointment.deleteAppointment(id)
-    .then(res.status(200).send(`delete appointment with id: ${id}`))
+    const {appointment_id, doctor_id} = req.params;
+    console.log(req.params)
+    model.appointment.deleteAppointment(appointment_id, doctor_id)
+    .then(res.status(200).send(`delete appointment with appointment_id: ${appointment_id}`))
     .catch((err) => { res.status(404).send(err); });
   }
 };

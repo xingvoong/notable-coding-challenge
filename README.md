@@ -38,4 +38,4 @@ Now the app is ready at http://localhost:3000/
 ## Required tech
 Server: Node, Express
 
-Database: MongoDB
+Database: Postgresql
